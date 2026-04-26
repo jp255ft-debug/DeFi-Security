@@ -1,0 +1,54 @@
+
+
+  GreenHydrogenSBT
+    Deployment
+      ✔ Should deploy with correct name and symbol
+      ✔ Should set the right owner
+      ✔ Should initialize token counter at 0
+      ✔ Should set batch registry and compliance verifier
+    Minting
+      ✔ Should mint a new certificate
+      ✔ Should increment token counter after minting
+      ✔ Should fail if minting from non-owner
+      ✔ Should fail if batch already has a certificate
+      ✔ Should fail with invalid producer address
+      ✔ Should mint multiple certificates for different batches
+    Consumption
+      ✔ Should consume a certificate
+      ✔ Should fail if consuming from non-owner
+      ✔ Should fail if certificate already consumed
+      ✔ Should fail if token does not exist
+    Verification
+      ✔ Should verify certificate exists via ownerOf
+      ✔ Should get certificate data
+      ✔ Should get token ID for batch
+      ✔ Should return 0 for non-existent batch
+      ✔ Should verify certificate is valid
+      ✔ Should verify certificate is not valid after consumption
+      ✔ Should calculate carbon savings
+    Batch operations
+      ✔ Should get certificates by producer
+      ✔ Should get certificates by owner
+      ✔ Should return empty array for producer with no certificates
+    Admin functions
+      ✔ Should update batch registry
+      ✔ Should fail to update batch registry from non-owner
+      ✔ Should update compliance verifier
+      ✔ Should fail to update compliance verifier from non-owner
+      ✔ Should fail to set invalid batch registry
+      ✔ Should fail to set invalid compliance verifier
+    SBT properties (non-transferable)
+      ✔ Should not allow transfers from regular users
+      ✔ Should not allow safeTransferFrom from regular users
+      ✔ Should allow owner to transfer (migration)
+      ✔ Should update owner certificates mapping after owner transfer
+    Edge cases
+      ✔ Should handle empty bytes32 batch ID
+      ✔ Should handle very long token URI
+      ✔ Should revert on non-existent token data query
+      ✔ Should revert isValidCertificate for non-existent token
+      ✔ Should revert calculateCarbonSavings for non-existent token
+
+
+  39 passing (1s)
+
