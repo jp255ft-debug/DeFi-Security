@@ -29,9 +29,21 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import { fetchBatches, fetchStats } from "@/lib/api";
+import type { Batch } from "@/types/batch";
+
+interface LoteProdutor {
+  id: string;
+  tamanhoKg: number;
+  emissoesGhg: number;
+  consumoAgua: number;
+  conforme: boolean;
+  data: string;
+  status: string;
+  pontuacao: number;
+}
 
 // Dados mock para demonstração
-const mockLotesProdutor = [
+const mockLotesProdutor: LoteProdutor[] = [
   {
     id: "batch_045",
     tamanhoKg: 1800,
@@ -122,7 +134,7 @@ export default function PainelProdutor() {
     certificadosEmitidos: 0,
     tendenciaConformidade: "+0%",
   });
-  const [lotesProdutor, setLotesProdutor] = useState(mockLotesProdutor);
+  const [lotesProdutor, setLotesProdutor] = useState<LoteProdutor[]>(mockLotesProdutor);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -546,7 +558,7 @@ export default function PainelProdutor() {
               </tr>
             </thead>
             <tbody>
-              {lotesProdutor.map((lote: any) => (
+              {lotesProdutor.map((lote: LoteProdutor) => (
                 <tr key={lote.id} className="border-b hover:bg-gray-100 dark:hover:bg-gray-800">
                   <td className="py-3 px-4">
                     <div className="font-medium">{lote.id}</div>

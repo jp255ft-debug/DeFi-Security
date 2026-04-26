@@ -313,15 +313,3 @@ export const dynamic = 'force-dynamic'; // Sempre executar dinamicamente
 export const runtime = 'nodejs'; // Usar runtime Node.js
 export const maxDuration = 30; // Timeout máximo de 30 segundos
 
-// Configuração de CORS para preflight requests
-export async function OPTIONS_PREFLIGHT() {
-  return new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-      'Access-Control-Max-Age': '86400', // 24 horas
-    },
-  });
-}

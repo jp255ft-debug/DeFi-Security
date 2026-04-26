@@ -6,6 +6,7 @@ import { PlusCircle, Search, Download, AlertTriangle, CheckCircle, Clock } from 
 import Navbar from "@/components/layout/Navbar";
 import { useBatches } from "@/hooks/useBatch";
 import LoadingSpinner from "@/components/shared/LoadingSpinner";
+import type { Batch } from "@/types/batch";
 
 export default function ProducerBatchesPage() {
   const [searchTerm, setSearchTerm] = useState("");

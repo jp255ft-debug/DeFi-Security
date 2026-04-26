@@ -64,7 +64,7 @@ export default function CertificatesTable({ batches: propBatches, limit = 5 }: C
       emissions: batch.telemetry?.ghg_emissions || 0,
       water: batch.telemetry?.water_consumption_liters || 0,
       isCompliant: batch.is_compliant,
-      date: new Date(batch.created_at).toLocaleDateString('pt-BR'),
+      date: new Date(batch.created_at || "").toLocaleDateString('pt-BR'),
       producer: batch.producer_wallet ? `${batch.producer_wallet.slice(0, 6)}...${batch.producer_wallet.slice(-4)}` : 'Produtor A'
     }));
 
