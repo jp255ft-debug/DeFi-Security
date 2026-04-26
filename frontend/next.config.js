@@ -12,7 +12,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['localhost', 'h2trust.com.br', 'www.h2trust.com.br', 'h2v-trust-api.onrender.com'],
+    domains: ['localhost', 'h2vtrust.com.br', 'www.h2vtrust.com.br', 'h2v-trust-api.onrender.com'],
   },
   // Importante para o Render - usar hostname 0.0.0.0
   // hostname: '0.0.0.0',
