@@ -8,7 +8,7 @@ export default function LandingPage() {
             H2V-Trust
           </h1>
           <p className="text-xl text-emerald-100 mb-8">
-            Certifica├º├úo Blockchain para Hidrog├¬nio Verde<br />
+            Certificação Blockchain para Hidrogênio Verde<br />
             Conformidade com CBAM 2026
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
@@ -35,16 +35,16 @@ export default function LandingPage() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-20">
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-            <h3 className="text-xl font-semibold text-white mb-2">Blockchain Imut├ível</h3>
-            <p className="text-emerald-100">Certificados SBT n├úo-transfer├¡veis, prevenindo double counting.</p>
+            <h3 className="text-xl font-semibold text-white mb-2">Blockchain Imutável</h3>
+            <p className="text-emerald-100">Certificados SBT não-transferíveis, prevenindo double counting.</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
             <h3 className="text-xl font-semibold text-white mb-2">CBAM 2026 Ready</h3>
-            <p className="text-emerald-100">Limite de 3.4 kgCOÔéée/kgHÔéé, verifica├º├úo por terceiros.</p>
+            <p className="text-emerald-100">Limite de 3.4 kgCO₂e/kgH₂, verificação por terceiros.</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
             <h3 className="text-xl font-semibold text-white mb-2">Rastreabilidade Total</h3>
-            <p className="text-emerald-100">Do sensor no Pec├®m ao QR Code em Roterd├ú.</p>
+            <p className="text-emerald-100">Do sensor no Pecém ao QR Code em Roterdã.</p>
           </div>
         </div>
       </div>
