@@ -4,9 +4,14 @@ export default function LandingPage() {
     <main className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-4">
-            H2V-Trust
-          </h1>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <h1 className="text-5xl font-bold text-white">
+              H2V-Trust
+            </h1>
+            <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2 py-1 rounded-full border border-emerald-500/30">
+              v1.0.0
+            </span>
+          </div>
           <p className="text-xl text-emerald-100 mb-8">
             Certificação Blockchain para Hidrogênio Verde<br />
             Conformidade com CBAM 2026
