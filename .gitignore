@@ -127,3 +127,17 @@ mock-data/
 
 # Test next app (experimental)
 test-next-app/
+
+# Debug output files
+git_diff_output*.txt
+dumb_output.txt
+code_check.txt
+code.txt
+pytest_output*.txt
+test_mint_out*.txt
+compile_out.txt
+deploy_out*.txt
+hardhat_res.txt
+tree_clean.txt
+tree_completo.txt
+checksum.txt

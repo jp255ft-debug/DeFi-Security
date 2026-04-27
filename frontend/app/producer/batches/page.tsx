@@ -13,7 +13,7 @@ export default function ProducerBatchesPage() {
   const { batches, total, isLoading, error } = useBatches({ limit: 50 });
 
   const filteredBatches = batches.filter(
-    (b) =>
+    (b: any) =>
       b.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
       b.producer_id?.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -53,7 +53,7 @@ export default function ProducerBatchesPage() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Meus Lotes</h1>
             <p className="text-muted-foreground">
-              Gerencie seus lotes de produ├º├úo de hidrog├¬nio verde
+              Gerencie seus lotes de produção de hidrogênio verde
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -95,13 +95,13 @@ export default function ProducerBatchesPage() {
           <div className="border rounded-lg p-4">
             <p className="text-sm text-muted-foreground">Conformes</p>
             <p className="text-2xl font-bold text-green-600">
-              {batches.filter((b) => b.is_compliant).length}
+              {batches.filter((b: any) => b.is_compliant).length}
             </p>
           </div>
           <div className="border rounded-lg p-4">
             <p className="text-sm text-muted-foreground">Pendentes</p>
             <p className="text-2xl font-bold text-yellow-600">
-              {batches.filter((b) => !b.is_compliant).length}
+              {batches.filter((b: any) => !b.is_compliant).length}
             </p>
           </div>
         </div>
@@ -114,11 +114,11 @@ export default function ProducerBatchesPage() {
                 <tr className="border-b bg-muted/50">
                   <th className="text-left py-3 px-4 font-medium text-sm">ID do Lote</th>
                   <th className="text-left py-3 px-4 font-medium text-sm">Tamanho</th>
-                  <th className="text-left py-3 px-4 font-medium text-sm">Emiss├Áes GHG</th>
-                  <th className="text-left py-3 px-4 font-medium text-sm">Consumo ├ügua</th>
+                  <th className="text-left py-3 px-4 font-medium text-sm">Emissões GHG</th>
+                  <th className="text-left py-3 px-4 font-medium text-sm">Consumo Água</th>
                   <th className="text-left py-3 px-4 font-medium text-sm">Status</th>
                   <th className="text-left py-3 px-4 font-medium text-sm">Data</th>
-                  <th className="text-left py-3 px-4 font-medium text-sm">A├º├Áes</th>
+                  <th className="text-left py-3 px-4 font-medium text-sm">Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -129,17 +129,17 @@ export default function ProducerBatchesPage() {
                     </td>
                   </tr>
                 ) : (
-                  filteredBatches.map((batch) => (
+                  filteredBatches.map((batch: any) => (
                     <tr key={batch.id} className="border-b hover:bg-muted/30">
                       <td className="py-3 px-4">
                         <div className="font-medium">{batch.id.substring(0, 12)}...</div>
                       </td>
                       <td className="py-3 px-4">{batch.size_kg.toLocaleString()} kg</td>
                       <td className="py-3 px-4">
-                        {batch.telemetry?.ghg_emissions?.toFixed(2) || "N/A"} kgCOÔéée/kgHÔéé
+                        {batch.telemetry?.ghg_emissions?.toFixed(2) || "N/A"} kgCO₂e/kgH₂
                       </td>
                       <td className="py-3 px-4">
-                        {batch.telemetry?.water_consumption_liters?.toFixed(1) || "N/A"} L/kgHÔéé
+                        {batch.telemetry?.water_consumption_liters?.toFixed(1) || "N/A"} L/kgH₂
                       </td>
                       <td className="py-3 px-4">{getStatusBadge(batch.is_compliant)}</td>
                       <td className="py-3 px-4 text-sm text-muted-foreground">
