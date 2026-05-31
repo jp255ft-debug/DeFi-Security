@@ -1,0 +1,21 @@
+{
+    "compiler": "solc",
+    "solc_version": "0.8.19",
+    "build_command": "forge build",
+    "test_command": "forge test",
+    "sources": [
+        "src/",
+        "audits/*/src/",
+        "audits/*/poc/src/"
+    ],
+    "artifacts": "out/",
+    "test_directories": [
+        "test/",
+        "audits/*/poc/test/"
+    ],
+    "symbolic_storage_slots": 2,
+    "max_transactions": 10,
+    "max_loop_iterations": 3,
+    "show_unreachable_paths": true,
+    "highlight_errors": true
+}

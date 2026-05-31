@@ -1,0 +1,92 @@
+[
+    {
+        "addr": "0x2BE2e230e89c59c8E20E633C524AD2De246e7370",
+        "isContract": true,
+        "name": "APOLLO_GOVERNOR"
+    },
+    {
+        "addr": "0xBb8d88bcD9749636BC4D2bE22aaC4Bb3B01A58F1",
+        "isContract": true,
+        "name": "GOVTOKEN"
+    },
+    {
+        "addr": "0xCd76e63f3AbFA864c53b4B98F57c1aA6539FDa3a",
+        "isContract": true,
+        "name": "stkMFAM"
+    },
+    {
+        "addr": "0x79a1a71786a325db7Fe70bbF080a1ee046F53c74",
+        "isContract": true,
+        "name": "STELLASWAP_REWARDER_MOVR"
+    },
+    {
+        "addr": "0x0b7a0EAA884849c6Af7a129e899536dDDcA4905E",
+        "name": "UNITROLLER",
+        "isContract": true
+    },
+    {
+        "addr": "0xCd76e63f3AbFA864c53b4B98F57c1aA6539FDa3a",
+        "name": "STK_GOVTOKEN_PROXY",
+        "isContract": true
+    },
+    {
+        "addr": "0x6a1A771C7826596652daDC9145fEAaE62b1cd07f",
+        "name": "MNATIVE",
+        "isContract": true
+    },
+    {
+        "addr": "0xE6Bfc609A2e58530310D6964ccdd236fc93b4ADB",
+        "name": "GOVTOKEN_LP",
+        "isContract": true
+    },
+    {
+        "addr": "0xc2dA00D538237822e3c7dcb95114FA1474e4c884",
+        "name": "MOONWELL_VIEWS_IMPLEMENTATION",
+        "isContract": true
+    },
+    {
+        "addr": "0x1a05D666294ad867287fA8AefcCEb89Bd9AeE115",
+        "name": "MOONWELL_VIEWS_PROXY_ADMIN",
+        "isContract": true
+    },
+    {
+        "addr": "0x6F0cC02e5a7640B28F538fcc06bCA3BdFA57d1BB",
+        "name": "MOONWELL_VIEWS_PROXY",
+        "isContract": true
+    },
+    {
+        "addr": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+        "name": "WMOVR",
+        "isContract": true
+    },
+    {
+        "addr": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+        "name": "USDC",
+        "isContract": true
+    },
+    {
+        "addr": "0xFfFFfFff1FcaCBd218EDc0EbA20Fc2308C778080",
+        "name": "xcKSM",
+        "isContract": true
+    },
+    {
+        "addr": "0x1A93B23281CC1CDE4C4741353F3064709A16197d",
+        "name": "FRAX",
+        "isContract": true
+    },
+    {
+        "addr": "0xe537f70a8b62204832B8Ba91940B77d3f79AEb81",
+        "name": "WMOVR_USDC_PAIR",
+        "isContract": true
+    },
+    {
+        "addr": "0xea3d1E9e69ADDFA1ee5BBb89778Decd862F1F7C5",
+        "name": "xcKSM_WMOVR_PAIR",
+        "isContract": true
+    },
+    {
+        "addr": "0x2cc54b4A3878e36E1C754871438113C1117a3ad7",
+        "name": "FRAX_WMOVR_PAIR",
+        "isContract": true
+    }
+]

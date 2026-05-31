@@ -1,0 +1,77 @@
+# ============================================================
+# Aderyn CI — Análise Estática Automatizada (GitHub Actions)
+# ============================================================
+# Executa o Aderyn em cada projeto auditado automaticamente
+# a cada push ou pull request na branch main.
+#
+# Gera relatórios individuais por projeto em:
+#   audits/<projeto>/findings/automated/aderyn_ci_report.md
+#
+# Instalação:
+#   Basta fazer push deste arquivo para .github/workflows/
+#   O GitHub Actions executará automaticamente.
+#
+# Documentação da action:
+#   https://github.com/cyfrin/aderyn-action
+# ============================================================
+
+name: Aderyn Security Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # Permite execução manual via GitHub UI
+  workflow_dispatch:
+
+jobs:
+  # Job único que descobre projetos e executa Aderyn em cada um
+  aderyn-scan:
+    runs-on: ubuntu-latest
+
+    # Matrix strategy: executa um job por projeto auditado
+    # Adicione novos projetos nesta lista conforme forem criados
+    strategy:
+      fail-fast: false  # Não cancela outros jobs se um falhar
+      matrix:
+        project:
+          - LayerZero
+          - Moonwell
+          - Monetrix
+          - Momentum
+          - Polymarket
+          - CircleUSDCBridge
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Verificar se o projeto existe
+        id: check_project
+        run: |
+          if [ -d "audits/${{ matrix.project }}/src" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Executar Aderyn no projeto
+        if: steps.check_project.outputs.exists == 'true'
+        uses: cyfrin/aderyn-action@v1
+        with:
+          path: ./audits/${{ matrix.project }}/src/
+          output: audits/${{ matrix.project }}/findings/automated/aderyn_ci_report.md
+
+      - name: Notificar conclusão
+        if: steps.check_project.outputs.exists == 'true'
+        run: |
+          echo "✅ Aderyn concluído para ${{ matrix.project }}"
+          echo "   Relatório: audits/${{ matrix.project }}/findings/automated/aderyn_ci_report.md"
+
+      - name: Avisar se projeto não tem src/
+        if: steps.check_project.outputs.exists == 'false'
+        run: |
+          echo "⚠️  Projeto ${{ matrix.project }} não possui diretório src/"
+          echo "   Ignorando..."

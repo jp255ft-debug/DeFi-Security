@@ -1,0 +1,26 @@
+# =============================================================================
+# Dependencias Python para DePIN Security Workspace
+# =============================================================================
+# Instalacao: pip install -r requirements_depin.txt
+
+# --- Core ---
+web3>=6.0.0              # Interacao com Ethereum/blockchain
+eth-account>=0.8.0       # Gerenciamento de contas Ethereum
+requests>=2.28.0         # Requisicoes HTTP
+
+# --- DePIN Networks ---
+# Streamr: Rede de dados em tempo real
+streamr-client>=8.0.0
+
+# Helium: Rede IoT descentralizada
+# helium-api-wrapper>=1.0.0  # Descomente quando for usar
+
+# DIMO: Veiculos conectados
+dimo-python-sdk>=0.1.0
+
+# --- IoT ---
+# paho-mqtt>=1.6.0       # MQTT para dispositivos IoT (descomente se necessario)
+
+# --- Utilitarios ---
+python-dotenv>=1.0.0     # Gerenciamento de variaveis de ambiente
+colorlog>=6.0.0          # Logs coloridos

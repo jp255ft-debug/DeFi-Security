@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "telemetry": {
+    "timestamp": 1780100903,
+    "location": {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "altitude": 10.5
+    },
+    "speed_kmh": 65.0,
+    "fuel_level_percent": 78.5,
+    "odometer_km": 15234.7,
+    "engine_rpm": 2100,
+    "battery_voltage": 12.6,
+    "vin": "SIMULATED_VIN_12345",
+    "make": "Tesla",
+    "model": "Model 3",
+    "year": 2023
+  },
+  "signature": "f83309f9d7a61005e04f15d2b4a1c2a7b41f05f49d13c68ecdaab5ec1417a0e36bb2c08eb337f0c4159f9b43ee9a2179eef3b99a787f0e652385683560a2fd6b1c",
+  "signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "signed_at": 1780100903
+}

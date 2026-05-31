@@ -1,0 +1,54 @@
+name: Base Sepolia
+
+on:
+  workflow_dispatch:
+
+env:
+    BASE_RPC_URL: ${{secrets.BASE_SEPOLIA_RPC_URL}}
+    OP_RPC_URL: ${{secrets.OP_SEPOLIA_RPC_URL}}
+    MOONBEAM_RPC_URL: ${{secrets.MOONBASE_RPC_URL}}
+    PRIMARY_FORK_ID: 1
+    FOUNDRY_PROFILE: ci
+
+jobs:
+  live-system-integration-tests:
+    name: Live System Integration Tests
+    runs-on: blacksmith-4vcpu-ubuntu-2404
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Setup Environment
+        uses: ./.github/actions
+
+      - name: Live System Integration Tests
+        uses: nick-fields/retry@v3
+        with:
+           polling_interval_seconds: 30
+           retry_wait_seconds: 60
+           timeout_minutes: 30
+           max_attempts: 3
+           command: time forge test --match-contract BaseSepoliaTest -vvv --ffi --rpc-url base
+
+  xwell-integration-tests:
+    name: xWell Integration Tests
+    runs-on: blacksmith-4vcpu-ubuntu-2404
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Setup Environment
+        uses: ./.github/actions
+
+      - name: Run Integration Tests
+        uses: nick-fields/retry@v3
+        with:
+           polling_interval_seconds: 30
+           retry_wait_seconds: 60
+           timeout_minutes: 30
+           max_attempts: 3
+           command: time forge test --match-contract 'xWellIntegrationTest' --fork-url base -vvv --ffi

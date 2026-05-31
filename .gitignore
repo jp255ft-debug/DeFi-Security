@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+lib/
+
+# Build artifacts
+out/
+cache/
+artifacts/
+typechain-types/
+
+# Foundry
+broadcast/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Coverage
+coverage/
+coverage.json
+lcov.info
+
+# Reports (keep only final versions)
+audits/*/findings/automated/*.json
+audits/*/findings/automated/*.txt
+
+# Echidna
+echidna.yaml
+crytic-export/
+
+# Halmos
+halmos-cache/
+halmos.out/
+
+# EVMbench dataset (download separately)
+knowledge_base/evmbench/dataset/contracts/
+knowledge_base/evmbench/results/
+
+# Secrets
+**/secrets*
+**/*key*
+**/*.pem

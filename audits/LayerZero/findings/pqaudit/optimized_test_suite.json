@@ -1,0 +1,24 @@
+{
+  "selected_tests": [],
+  "total_tests_original": 2,
+  "total_tests_selected": 0,
+  "reduction_percentage": 100.0,
+  "total_cost": 0,
+  "covered_categories": [
+    "reentrancy",
+    "access_control",
+    "arithmetic_overflow",
+    "oracle_manipulation",
+    "flash_loan_attack",
+    "permit_frontrun",
+    "delegatecall_injection",
+    "selfdestruct",
+    "tx_origin",
+    "gas_griefing",
+    "timestamp_dependency",
+    "signature_replay"
+  ],
+  "coverage_percentage": 100.0,
+  "energy": -6.0,
+  "solver": "greedy"
+}
