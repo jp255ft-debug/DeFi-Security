@@ -1,0 +1,120 @@
+﻿python : C:\Users\Usuario\
+AppData\Local\Programs\Pyt
+hon\Python313\Lib\site-pac
+kages\web3\__init__.py:2: 
+UserWarning: 
+pkg_resources is 
+deprecated as an API. See 
+https://setuptools.pypa.io
+/en/latest/pkg_resources.h
+tml. The pkg_resources 
+package is slated for 
+removal as early as 
+2025-11-30. Refrain from 
+using this package or pin 
+to Setuptools<81.
+No linha:1 caractere:1
++ python -c "import 
+logging, asyncio, uuid; lo
+gging.basicConfig(level=l 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  :\Users\Usuari... Set   
+ uptools<81.:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+  import pkg_resources
+C:\Users\Usuario\AppData\L
+ocal\Programs\Python\Pytho
+n313\Lib\site-packages\req
+uests\__init__.py:113: Req
+uestsDependencyWarning: 
+urllib3 (2.6.3) or 
+chardet (7.4.3)/charset_no
+rmalizer (3.4.4) doesn't 
+match a supported version!
+  warnings.warn(
+INFO:blockchain.web3_clien
+t:Initializing Web3 
+connection to: 
+http://127.0.0.1:8545
+INFO:blockchain.web3_clien
+t:Connected to blockchain 
+network. Chain ID: 1337
+INFO:blockchain.web3_clien
+t:Injecting PoA 
+middleware for 
+Hardhat/local network
+INFO:blockchain.web3_clien
+t:Loading contract at 
+address: 0x4826533B4897376
+654Bb4d4AD88B7faFD0C98528
+INFO:blockchain.web3_clien
+t:Found ABI at: C:\Source\
+Repos\h2v-trust\contracts\
+artifacts\contracts\GreenH
+ydrogenSBT.sol\GreenHydrog
+enSBT.json
+INFO:blockchain.web3_clien
+t:Contract loaded 
+successfully from C:\Sourc
+e\Repos\h2v-trust\contract
+s\artifacts\contracts\Gree
+nHydrogenSBT.sol\GreenHydr
+ogenSBT.json
+INFO:blockchain.web3_clien
+t:Web3 initialization 
+completed successfully
+INFO:backend.blockchain.mi
+nting:Estimated gas: 
+827544, using: 1241316
+C:\Users\Usuario\AppData\L
+ocal\Programs\Python\Pytho
+n313\Lib\site-packages\web
+3\contract\base_contract.p
+y:185: UserWarning: The 
+log with transaction 
+hash: HexBytes('0x4dc504cf
+db7e12e33fb318ffdbebf8ce12
+d8732daeda944e4dee8c6eabbf
+4bd5') and logIndex: 0 
+encountered the following 
+error during processing: 
+MismatchedABI(The event 
+signature did not match 
+the provided ABI). It has 
+been discarded.
+  warnings.warn(
+C:\Users\Usuario\AppData\L
+ocal\Programs\Python\Pytho
+n313\Lib\site-packages\web
+3\contract\base_contract.p
+y:185: UserWarning: The 
+log with transaction 
+hash: HexBytes('0x4dc504cf
+db7e12e33fb318ffdbebf8ce12
+d8732daeda944e4dee8c6eabbf
+4bd5') and logIndex: 1 
+encountered the following 
+error during processing: 
+MismatchedABI(The event 
+signature did not match 
+the provided ABI). It has 
+been discarded.
+  warnings.warn(
+INFO:backend.blockchain.mi
+nting:Token ID extracted 
+from event logs: 2
+INFO:backend.blockchain.mi
+nting:Certificate minted: 
+token_id=2, tx_hash=4dc504
+cfdb7e12e33fb318ffdbebf8ce
+12d8732daeda944e4dee8c6eab
+bf4bd5

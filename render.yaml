@@ -1,0 +1,56 @@
+# H2V-Trust Render Configuration
+# Deploy: https://dashboard.render.com
+# Apenas Backend + Banco (Frontend está na Vercel)
+
+services:
+  # Backend API - FastAPI
+  - type: web
+    name: h2v-trust-api
+    env: python
+    region: ohio  # US East - melhor latência para Brasil
+    plan: starter  # $7/mo - suficiente para MVP
+    buildCommand: |
+      pip install -r backend/requirements.prod.txt
+    startCommand: |
+      cd backend && gunicorn main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT --timeout 120
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: h2v-trust-db
+          property: connectionString
+      - key: REDIS_URL
+        value: redis://redistogo:YOUR_REDIS_URL@redistogo:10379  # Opcional - Redis To Go
+      - key: POLYGON_RPC_URL
+        value: https://polygon-rpc.com
+      - key: PRIVATE_KEY
+        sync: false  # Será configurado manualmente
+      - key: CONTRACT_ADDRESS
+        sync: false  # Será configurado manualmente
+      - key: SECRET_KEY
+        generateValue: true
+      - key: MOCK_MODE
+        value: "true"  # Começa com mock até deploy dos contratos na Polygon
+      - key: CORS_ORIGINS
+        value: https://h2vtrust.com.br,https://www.h2vtrust.com.br,https://h2v-trust.vercel.app
+      - key: NEXT_PUBLIC_API_URL
+        value: https://h2v-trust-api.onrender.com
+      - key: BATCH_REGISTRY_ADDRESS
+        sync: false
+      - key: COMPLIANCE_VERIFIER_ADDRESS
+        sync: false
+      - key: DELEGATION_MANAGER_ADDRESS
+        sync: false
+      - key: GREEN_HYDROGEN_SBT_ADDRESS
+        sync: false
+
+databases:
+  # PostgreSQL Database
+  - name: h2v-trust-db
+    plan: starter  # $7/mo - 1GB storage
+    region: ohio
+    databaseName: h2v_trust
+    user: h2v_user
+    ipAllowList: []  # Allow all (secured by Render network)

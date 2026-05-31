@@ -1,0 +1,63 @@
+[1m[31mDeclarationError:[39m[22m Identifier already declared.
+  --> contracts/IBatchRegistry.sol:58:9:
+   |
+58 |         bytes32 batchId,
+   |         ^^^^^^^^^^^^^^^
+Note: The previous declaration is here:
+  --> contracts/IBatchRegistry.sol:57:22:
+   |
+57 |     function batches(bytes32 batchId) external view returns (
+   |                      ^^^^^^^^^^^^^^^
+
+
+[1m[31mDeclarationError:[39m[22m Identifier already declared.
+  --> contracts/IBatchRegistry.sol:72:9:
+   |
+72 |         bytes32 batchId,
+   |         ^^^^^^^^^^^^^^^
+Note: The previous declaration is here:
+  --> contracts/IBatchRegistry.sol:71:29:
+   |
+71 |     function complianceData(bytes32 batchId) external view returns (
+   |                             ^^^^^^^^^^^^^^^
+
+
+[1m[31mDeclarationError:[39m[22m Identifier already declared.
+  --> contracts/IComplianceVerifier.sol:89:9:
+   |
+89 |         bytes32 batchId,
+   |         ^^^^^^^^^^^^^^^
+Note: The previous declaration is here:
+  --> contracts/IComplianceVerifier.sol:88:34:
+   |
+88 |     function verificationResults(bytes32 batchId) external view returns (
+   |                                  ^^^^^^^^^^^^^^^
+
+
+[1m[31mDeclarationError:[39m[22m Identifier already declared.
+   --> contracts/IComplianceVerifier.sol:100:9:
+    |
+100 |         bytes32 batchId,
+    |         ^^^^^^^^^^^^^^^
+Note: The previous declaration is here:
+  --> contracts/IComplianceVerifier.sol:99:34:
+   |
+99 |     function penaltyCalculations(bytes32 batchId) external view returns (
+   |                                  ^^^^^^^^^^^^^^^
+
+
+[1m[31mDeclarationError:[39m[22m Identifier already declared.
+  --> contracts/IDelegationManager.sol:87:9:
+   |
+87 |         bytes32 scopeId,
+   |         ^^^^^^^^^^^^^^^
+Note: The previous declaration is here:
+  --> contracts/IDelegationManager.sol:86:21:
+   |
+86 |     function scopes(bytes32 scopeId) external view returns (
+   |                     ^^^^^^^^^^^^^^^
+
+
+[31m[1mError[22m[39m [31m[1mHH600:[22m[39m Compilation failed
+
+For more info go to https://v2.hardhat.org/HH600 or run Hardhat with --show-stack-traces

@@ -1,0 +1,217 @@
+﻿python : C:\Users\Usuario\
+AppData\Local\Programs\Pyt
+hon\Python313\Lib\site-pac
+kages\web3\__init__.py:2: 
+UserWarning: 
+pkg_resources is 
+deprecated as an API. See 
+https://setuptools.pypa.io
+/en/latest/pkg_resources.h
+tml. The pkg_resources 
+package is slated for 
+removal as early as 
+2025-11-30. Refrain from 
+using this package or pin 
+to Setuptools<81.
+No linha:1 caractere:1
++ python -c "import 
+logging, asyncio; logging.
+basicConfig(level=logging 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  :\Users\Usuari... Set   
+ uptools<81.:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+  import pkg_resources
+C:\Users\Usuario\AppData\L
+ocal\Programs\Python\Pytho
+n313\Lib\site-packages\req
+uests\__init__.py:113: Req
+uestsDependencyWarning: 
+urllib3 (2.6.3) or 
+chardet (7.4.3)/charset_no
+rmalizer (3.4.4) doesn't 
+match a supported version!
+  warnings.warn(
+INFO:blockchain.web3_clien
+t:Initializing Web3 
+connection to: 
+http://127.0.0.1:8545
+INFO:blockchain.web3_clien
+t:Connected to blockchain 
+network. Chain ID: 1337
+INFO:blockchain.web3_clien
+t:Injecting PoA 
+middleware for 
+Hardhat/local network
+INFO:blockchain.web3_clien
+t:Loading contract at 
+address: 0x4826533B4897376
+654Bb4d4AD88B7faFD0C98528
+INFO:blockchain.web3_clien
+t:Found ABI at: C:\Source\
+Repos\h2v-trust\contracts\
+artifacts\contracts\GreenH
+ydrogenSBT.sol\GreenHydrog
+enSBT.json
+INFO:blockchain.web3_clien
+t:Contract loaded 
+successfully from C:\Sourc
+e\Repos\h2v-trust\contract
+s\artifacts\contracts\Gree
+nHydrogenSBT.sol\GreenHydr
+ogenSBT.json
+INFO:blockchain.web3_clien
+t:Web3 initialization 
+completed successfully
+WARNING:backend.blockchain
+.minting:Gas estimation 
+failed: execution 
+reverted: Error: VM 
+Exception while 
+processing transaction: 
+reverted with reason 
+string 'Certificate 
+already minted for this 
+batch', using default 2M 
+gas
+Traceback (most recent 
+call last):
+  File "<string>", line 
+1, in <module>
+    import logging, 
+asyncio; logging.basicConf
+ig(level=logging.INFO); 
+from backend.blockchain.mi
+nting import mint_certific
+ate_on_chain; asyncio.run(
+mint_certificate_on_chain(
+'batch_id_test_999', '0x70
+997970C51812dc3A010C7d01b5
+0e0d17dc79C8', {}))
+                          
+                          
+                          
+                          
+                          
+      ~~~~~~~~~~~^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\asyncio\r
+unners.py", line 195, in 
+run
+    return 
+runner.run(main)
+           
+~~~~~~~~~~^^^^^^
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\asyncio\r
+unners.py", line 118, in 
+run
+    return self._loop.run_
+until_complete(task)
+           ~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\asyncio\b
+ase_events.py", line 725, 
+in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Source\Repos\h2
+v-trust\backend\blockchain
+\minting.py", line 114, 
+in 
+mint_certificate_on_chain
+    tx_hash = w3.eth.send_
+raw_transaction(raw_tx)
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\site-pack
+ages\web3\eth\eth.py", 
+line 373, in 
+send_raw_transaction
+    return self._send_raw_
+transaction(transaction)
+           ~~~~~~~~~~~~~~~
+~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\site-pack
+ages\web3\module.py", 
+line 75, in caller
+    result = w3.manager.re
+quest_blocking(
+        method_str, 
+params, error_formatters, 
+null_result_formatters
+    )
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\site-pack
+ages\web3\manager.py", 
+line 321, in 
+request_blocking
+    return 
+self.formatted_response(
+           
+~~~~~~~~~~~~~~~~~~~~~~~^
+        response, params, 
+error_formatters, 
+null_result_formatters
+        ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Usuario\A
+ppData\Local\Programs\Pyth
+on\Python313\Lib\site-pack
+ages\web3\manager.py", 
+line 284, in 
+formatted_response
+    raise 
+ValueError(error)
+ValueError: {'code': 
+-32603, 'message': 
+"Error: VM Exception 
+while processing 
+transaction: reverted 
+with reason string 
+'Certificate already 
+minted for this batch'", 
+'data': {'message': 
+"Error: VM Exception 
+while processing 
+transaction: reverted 
+with reason string 
+'Certificate already 
+minted for this batch'", 
+'txHash': '0xb3f9ee37141b4
+3a5754c9813db13b7e109e82f5
+0b1f1b593e8afbc85d904a80e'
+, 'data': '0x08c379a000000
+00000000000000000000000000
+00000000000000000000000000
+00000200000000000000000000
+00000000000000000000000000
+00000000000000000294365727
+46966696361746520616c72656
+16479206d696e74656420666f7
+22074686973206261746368000
+00000000000000000000000000
+00000000000000000'}}
