@@ -133,12 +133,44 @@ broadcast/
 **/out/*.yul/
 **/out/*.vy/
 
-# ── Relatórios Temporários ───────────────────────────────────────────────────
+# ── H2V-Trust — Não pertence ao DeFi Security ────────────────────────────────
+alembic.ini
+docker-compose*.yml
+render.yaml
+Makefile
+.env.production
+backend/
+frontend/
+iot/
+monitoring/
+nginx/
+contracts/
+tests/
+
+# ── Relatórios Internos Privados ──────────────────────────────────────────────
+AUDITORIA_*.md
+RELATORIO_PROJETO.md
+RELATORIO_AUDITORIA_PRODUCAO.md
+H2V_TRUST_README.md
+
+# ── Arquivos Temporários e Debug ──────────────────────────────────────────────
+_debug_*.py
+test_*.py
+test_*.txt
+pytest_*.txt
+checksum.txt
+code_check.txt
+code.txt
+dumb_output.txt
+tree_*.txt
+*.tar.gz
 relatorio.pdf
 relatorio.docx
 *.tmp
 temp/
 tmp/
+-p/
+repo_temp/
 
 # ── Arquivos Grandes / Binários ──────────────────────────────────────────────
 *.tar.gz
