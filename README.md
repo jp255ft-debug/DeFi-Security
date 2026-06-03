@@ -238,13 +238,29 @@ defi-security-workspace/
 
 ---
 
-## 📞 Contato
+## 📞 Contato & Contratação
 
-- **GitHub:** [github.com/jp255ft-debug](https://github.com/jp255ft-debug)
+### 📅 Agende uma Consultoria Gratuita
+
+[![Calendly](https://img.shields.io/badge/Calendly-Agendar%20Agora-006BFF?style=for-the-badge&logo=calendly&logoColor=white)](https://calendly.com/jp255ft/30min)
+
+> **30 minutos gratuitos** para discutir seu projeto, necessidades de auditoria, ou oportunidades de colaboração.
+
+### 💼 Contratação Direta
+
+| Plataforma | Link | Melhor Para |
+|-----------|------|-------------|
+| **Upwork** | [Freelancer Profile](https://upwork.com/freelancers/jp255ft) | Projetos de auditoria freelance |
+| **Braintrust** | [Braintrust Profile](https://usebraintrust.com/jp255ft) | Contratos enterprise |
+| **LinkedIn** | [linkedin.com/in/jp255ft](https://linkedin.com/in/jp255ft) | Networking e oportunidades CLT |
+| **Twitter/X** | [@jp255ft](https://twitter.com/jp255ft) | Case studies e conteúdo técnico |
+
+### 📧 Contato Direto
+
 - **Email:** dev@deepsec-labs.com
-- **LinkedIn:** [linkedin.com/in/jp255ft](https://linkedin.com/in/jp255ft)
-- **Twitter/X:** [@jp255ft](https://twitter.com/jp255ft)
-- **Upwork:** [upwork.com/freelancers/jp255ft](https://upwork.com/freelancers/jp255ft)
+- **GitHub:** [github.com/jp255ft-debug](https://github.com/jp255ft-debug)
+- **Telegram:** [@jp255ft](https://t.me/jp255ft)
+- **Discord:** jp255ft#0001
 
 ---
 
