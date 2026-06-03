@@ -1,67 +1,169 @@
-# Dependencies
+# =============================================================================
+# .gitignore — DeFi Security Workspace
+# Protege credenciais, chaves, findings confidenciais e artefatos de build
+# =============================================================================
+
+# ── Credenciais e Configuração Sensível ──────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+keystore.*
+secrets.*
+credentials.*
+config.local.*
+*.secret
+
+# ── Chaves Privadas e Wallets ────────────────────────────────────────────────
+**/keystore/
+**/wallet/
+**/accounts/
+**/private/
+mnemonic*
+private*
+wallet*.json
+**/hardhat/accounts.json
+
+# ── Findings Confidenciais (Bloquear até bounty ser pago) ────────────────────
+# LayerZero — Aguardando bounty (Immunefi US$ 15M)
+audits/LayerZero/submissions/
+audits/LayerZero/poc/
+audits/LayerZero/RELATORIO_FINAL.md
+audits/LayerZero/RELATORIO_VALIDACAO_CRUZADA.md
+audits/LayerZero/RELATORIO_ANALISE_INICIAL.md
+audits/LayerZero/RELATORIO_VALIDACAO_CODIGO.md
+
+# Moonwell — Aguardando bounty (Code4rena)
+audits/Moonwell/submissions/
+audits/Moonwell/poc/
+audits/Moonwell/RELATORIO_FINAL.md
+audits/Moonwell/RELATORIO_FINAL_MOONWELL.md
+audits/Moonwell/findings/
+
+# Ripio — Aguardando bounty
+audits/Ripio/submissions/
+audits/Ripio/poc/
+audits/Ripio/RELATORIO_FINAL.md
+audits/Ripio/findings/
+
+# Monetrix — Aguardando bounty
+audits/Monetrix/submissions/
+audits/Monetrix/poc/
+audits/Monetrix/findings/
+
+# Momentum — Aguardando bounty
+audits/Momentum/RELATORIO_FINAL.md
+audits/Momentum/RELATORIO_VALIDACAO_CODIGO.md
+audits/Momentum/RELATORIO_TRIAGEM.md
+
+# TRONDAO — Aguardando bounty
+audits/TRONDAO/findings/
+audits/TRONDAO/poc/
+
+# ── Dependências e Artefatos de Build ────────────────────────────────────────
 node_modules/
-lib/
-
-# Build artifacts
-out/
-cache/
+**/node_modules/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.cache/
 artifacts/
+cache/
 typechain-types/
+**/artifacts/
+**/cache/
+**/typechain-types/
+lib/
+**/lib/
+**/src/lib/
+**/poc/lib/
+**/latam_contracts/lib/
 
-# Foundry
-broadcast/
+# ── Ambientes Virtuais Python ────────────────────────────────────────────────
+venv/
+.venv/
+env/
+virtualenv/
+*.egg
 
-# IDE
+# ── IDE e Editor ─────────────────────────────────────────────────────────────
 .vscode/
+**/.vscode/
 .idea/
 *.swp
 *.swo
-
-# OS
+*~
 .DS_Store
 Thumbs.db
 
-# Environment
-.env
-.env.local
-.env.*.local
+# ── Resultados de Ferramentas ────────────────────────────────────────────────
+**/slither_results.json
+**/aderyn_results.json
+**/mythril_results.json
 
-# Logs
+# ── Logs e Outputs ───────────────────────────────────────────────────────────
 *.log
-npm-debug.log*
+logs/
+**/logs/
+output/
+**/output/
+*.out
+*.txt
+!requirements*.txt
+!RELATORIO_*.md
+!CASE_STUDY_*.md
+!README*.md
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
+# ── Docker ───────────────────────────────────────────────────────────────────
+docker-compose.override.yml
+*.dockercontext
 
-# Coverage
-coverage/
-coverage.json
-lcov.info
+# ── Hardhat / Foundry ────────────────────────────────────────────────────────
+broadcast/
+**/broadcast/
+**/out/
+**/out/*.sol/
+**/out/*.yul/
+**/out/*.vy/
 
-# Reports (keep only final versions)
-audits/*/findings/automated/*.json
-audits/*/findings/automated/*.txt
+# ── Relatórios Temporários ───────────────────────────────────────────────────
+relatorio.pdf
+relatorio.docx
+*.tmp
+temp/
+tmp/
 
-# Echidna
-echidna.yaml
-crytic-export/
+# ── Arquivos Grandes / Binários ──────────────────────────────────────────────
+*.tar.gz
+*.zip
+*.7z
+*.rar
+*.bin
+*.exe
+*.dmg
+*.iso
+*.pkl
+*.h5
+*.onnx
 
-# Halmos
-halmos-cache/
-halmos.out/
-
-# EVMbench dataset (download separately)
-knowledge_base/evmbench/dataset/contracts/
-knowledge_base/evmbench/results/
-
-# Secrets
-**/secrets*
-**/*key*
-**/*.pem
+# ── Repositórios Clonados Temporariamente ────────────────────────────────────
+repo_temp/
+repo_src/
+layerzero-v2/
+audits/TRONDAO/src/repo/
+audits/CircleArc/src/
+audits/CircleUSDCBridge/src/
+audits/Ripio/src/
+audits/Ripio/src
+audits/Ripio/latam_contracts/lib/
+audits/Moonwell/src/lib/
+audits/Polymarket/src/lib/
+audits/Polymarket/findings/automated/
+audits/CircleUSDCBridge/poc/lib/
