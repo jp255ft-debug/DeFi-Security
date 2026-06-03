@@ -1,1 +1,0 @@
-# Oracle module for H2V-Trust
