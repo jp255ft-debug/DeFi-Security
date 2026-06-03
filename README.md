@@ -111,8 +111,8 @@ docker --version
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/defi-security-workspace.git
-cd defi-security-workspace
+git clone https://github.com/jp255ft-debug/DeFi-Security.git
+cd DeFi-Security
 
 # Configure ambiente
 cp .env.example .env
@@ -240,10 +240,11 @@ defi-security-workspace/
 
 ## 📞 Contato
 
+- **GitHub:** [github.com/jp255ft-debug](https://github.com/jp255ft-debug)
 - **Email:** dev@deepsec-labs.com
-- **LinkedIn:** [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
-- **Upwork:** [upwork.com/freelancers/seu-perfil](https://upwork.com/freelancers/seu-perfil)
-- **Twitter/X:** [@seu-usuario](https://twitter.com/seu-usuario)
+- **LinkedIn:** [linkedin.com/in/jp255ft](https://linkedin.com/in/jp255ft)
+- **Twitter/X:** [@jp255ft](https://twitter.com/jp255ft)
+- **Upwork:** [upwork.com/freelancers/jp255ft](https://upwork.com/freelancers/jp255ft)
 
 ---
 
