@@ -10,13 +10,13 @@ requests>=2.28.0         # Requisicoes HTTP
 
 # --- DePIN Networks ---
 # Streamr: Rede de dados em tempo real
-streamr-client>=8.0.0
+# streamr-client>=8.0.0       # Pacote nao disponivel no PyPI
 
 # Helium: Rede IoT descentralizada
 # helium-api-wrapper>=1.0.0  # Descomente quando for usar
 
 # DIMO: Veiculos conectados
-dimo-python-sdk>=0.1.0
+# dimo-python-sdk>=0.1.0     # Pacote nao disponivel no PyPI
 
 # --- IoT ---
 # paho-mqtt>=1.6.0       # MQTT para dispositivos IoT (descomente se necessario)
