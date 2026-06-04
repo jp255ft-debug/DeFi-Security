@@ -57,12 +57,18 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Instalar Aderyn
+        if: steps.check_project.outputs.exists == 'true'
+        run: |
+          curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | bash
+          echo "$HOME/.aderyn/bin" >> $GITHUB_PATH
+
       - name: Executar Aderyn no projeto
         if: steps.check_project.outputs.exists == 'true'
-        uses: cyfrin/aderyn-action@v1
-        with:
-          path: ./audits/${{ matrix.project }}/src/
-          output: audits/${{ matrix.project }}/findings/automated/aderyn_ci_report.md
+        run: |
+          export PATH="$HOME/.aderyn/bin:$PATH"
+          aderyn audits/${{ matrix.project }}/src/ \
+            --output audits/${{ matrix.project }}/findings/automated/aderyn_ci_report.md
 
       - name: Notificar conclusão
         if: steps.check_project.outputs.exists == 'true'
