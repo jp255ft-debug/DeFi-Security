@@ -1,3 +1,0 @@
-@openzeppelin/=node_modules/@openzeppelin/
-@layerzerolabs/=node_modules/@layerzerolabs/
-hardhat-deploy/=node_modules/hardhat-deploy/

@@ -27,41 +27,10 @@ private*
 wallet*.json
 **/hardhat/accounts.json
 
-# ── Findings Confidenciais (Bloquear até bounty ser pago) ────────────────────
-# LayerZero — Aguardando bounty (Immunefi US$ 15M)
-audits/LayerZero/submissions/
-audits/LayerZero/poc/
-audits/LayerZero/RELATORIO_FINAL.md
-audits/LayerZero/RELATORIO_VALIDACAO_CRUZADA.md
-audits/LayerZero/RELATORIO_ANALISE_INICIAL.md
-audits/LayerZero/RELATORIO_VALIDACAO_CODIGO.md
-
-# Moonwell — Aguardando bounty (Code4rena)
-audits/Moonwell/submissions/
-audits/Moonwell/poc/
-audits/Moonwell/RELATORIO_FINAL.md
-audits/Moonwell/RELATORIO_FINAL_MOONWELL.md
-audits/Moonwell/findings/
-
-# Ripio — Aguardando bounty
-audits/Ripio/submissions/
-audits/Ripio/poc/
-audits/Ripio/RELATORIO_FINAL.md
-audits/Ripio/findings/
-
-# Monetrix — Aguardando bounty
-audits/Monetrix/submissions/
-audits/Monetrix/poc/
-audits/Monetrix/findings/
-
-# Momentum — Aguardando bounty
-audits/Momentum/RELATORIO_FINAL.md
-audits/Momentum/RELATORIO_VALIDACAO_CODIGO.md
-audits/Momentum/RELATORIO_TRIAGEM.md
-
-# TRONDAO — Aguardando bounty
-audits/TRONDAO/findings/
-audits/TRONDAO/poc/
+# ── AUDITS — Repositório Privado (Confidencial) ─────────────────────────────
+# Toda a pasta audits/ é mantida em repositório privado separado.
+# NADA de auditoria deve vazar para o público.
+audits/
 
 # ── Dependências e Artefatos de Build ────────────────────────────────────────
 node_modules/

@@ -1,8 +1,0 @@
-{
-  "extends": "solhint:recommended",
-  "rules": {
-    "compiler-version": ["error", "^0.7.6"],
-    "avoid-sha3": "warn",
-    "no-unused-vars": "warn"
-  }
-}

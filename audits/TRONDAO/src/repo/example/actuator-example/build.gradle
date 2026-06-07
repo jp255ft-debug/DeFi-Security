@@ -1,6 +1,0 @@
-description = "actuator-example – a example of actuator."
-
-dependencies {
-    api project(":actuator")
-}
-
