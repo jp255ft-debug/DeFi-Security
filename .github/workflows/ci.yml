@@ -48,17 +48,21 @@ jobs:
         run: |
           cd src && forge build --sizes
 
-      - name: Build LayerZero PoC
+      - name: Build & Test LayerZero PoC
         run: |
-          cd audits/LayerZero/poc && forge build --sizes || echo "⚠️ LayerZero PoC build falhou (pode ser dependência externa)"
+          cd audits/LayerZero/poc && forge build --sizes && forge test -vvv || echo "⚠️ LayerZero PoC build/test falhou (pode ser dependência externa)"
 
-      - name: Build Moonwell PoC
+      - name: Build & Test Moonwell PoC
         run: |
-          cd audits/Moonwell/poc && forge build --sizes || echo "⚠️ Moonwell PoC build falhou (pode ser dependência externa)"
+          cd audits/Moonwell/poc && forge build --sizes && forge test -vvv || echo "⚠️ Moonwell PoC build/test falhou (pode ser dependência externa)"
 
-      - name: Build Ripio PoC
+      - name: Build & Test Ripio PoC
         run: |
-          cd audits/Ripio/poc && forge build --sizes || echo "⚠️ Ripio PoC build falhou (pode ser dependência externa)"
+          cd audits/Ripio/poc && forge build --sizes && forge test -vvv || echo "⚠️ Ripio PoC build/test falhou (pode ser dependência externa)"
+
+      - name: Build & Test NEYRO PoC
+        run: |
+          cd audits/NEYRO/poc && forge build --sizes && forge test -vvv || echo "⚠️ NEYRO PoC build/test falhou (pode ser dependência externa)"
 
   # ── Validação DePIN ───────────────────────────────────────
   depin-validation:

@@ -106,7 +106,6 @@ broadcast/
 alembic.ini
 docker-compose*.yml
 render.yaml
-Makefile
 .env.production
 backend/
 frontend/
@@ -115,6 +114,8 @@ monitoring/
 nginx/
 contracts/
 tests/
+# Makefile da raiz é versionado (interface unificada do workspace)
+!Makefile
 
 # ── Relatórios Internos Privados ──────────────────────────────────────────────
 AUDITORIA_*.md
