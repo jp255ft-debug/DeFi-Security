@@ -154,7 +154,8 @@ repo_temp/
 *.h5
 *.onnx
 
-# ── Repositórios Clonados Temporariamente ────────────────────────────────────
+# ── Repositórios Clonados (Não pertencem ao projeto) ────────────────────────
+repo/
 repo_temp/
 repo_src/
 layerzero-v2/
@@ -168,3 +169,13 @@ audits/Moonwell/src/lib/
 audits/Polymarket/src/lib/
 audits/Polymarket/findings/automated/
 audits/CircleUSDCBridge/poc/lib/
+
+# ── Configurações Internas e Prompts (Propriedade Intelectual) ───────────────
+.cline/
+**/.cline/
+
+# ── Documentação Interna Sensível (Revisar antes de publicar) ────────────────
+GITHUB_UPLOAD_PLAN.md
+CASE_STUDY_GUIDE.md
+docs/cbam_compliance.md
+docs/namibia_reference.md
